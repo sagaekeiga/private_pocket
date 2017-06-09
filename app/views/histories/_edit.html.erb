@@ -1,0 +1,51 @@
+<div class="fix">
+<%= form_for(@history, url: history_path(@history), html: {method: 'patch', class: 'ui form'}) do |f| %>
+<div class="ui raised segment">
+<div class="ui accordion">
+  <div class="active title">
+    <i class="dropdown icon"></i>
+    登録
+  </div>
+    <div class="active content">
+
+    <div class="field">
+      <label>人物名</label>
+      <%= f.text_field :name, class: "" %>
+    </div>
+
+    <div class="field">
+      <label>出来事名</label>
+      <%= f.text_field :event, class: "" %>
+    </div>
+    
+    
+    <div class="field">
+      <label>URL</label>
+      <%= f.text_field :url, class: "" %>
+    </div>
+  
+    <div class="field">
+      <label>説明</label>
+      <%= f.text_area :description, class: '' %>
+    </div>
+
+    <div class="field">
+      <label>ページ番号</label>
+      <%= f.number_field :page, class: '' %>
+    </div>
+  
+  <div class="field">
+    <label>ステージ</label>
+      <%= f.number_field :stage, class: '' %>
+  </div>
+
+  
+  <div class="actions">
+    <%= f.submit "登録", class: 'ui button'%>
+  </div>
+  </div>
+  </div>
+</div>
+<% end %>
+</div>
+

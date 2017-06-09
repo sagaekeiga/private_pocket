@@ -1,0 +1,21 @@
+<% if user_signed_in? %>
+<div class="ui grid">
+  <div class="three column row">
+    <div class="column"></div>
+    <div class="column">
+      <div class="ui raised segments">
+        <div class="ui segment">
+          <%= link_to "歴史", histories_path %>
+        </div>
+        <div class="ui segment">
+          <p>Middle</p>
+        </div>
+        <div class="ui segment">
+          <p>Bottom</p>
+        </div>
+      </div>
+    </div>
+    <div class="column"></div>
+  </div>
+</div>
+<% end %>

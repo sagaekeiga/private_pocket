@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  event: MyString
+  page: 1
+  stage: 1
+  status: false
+  result: false
+
+two:
+  name: MyString
+  event: MyString
+  page: 1
+  stage: 1
+  status: false
+  result: false

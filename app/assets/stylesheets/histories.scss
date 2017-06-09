@@ -1,0 +1,20 @@
+// Place all the styles related to the histries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.fix {
+  position: fixed; /* スクロールしても位置を固定 */
+  width: 100%;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+.edit {
+  background-color: gray;
+}
+
+.h_100 {
+  height: 100px;
+}

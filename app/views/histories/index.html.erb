@@ -1,0 +1,41 @@
+<div class="ui grid">
+  <div class="sixteen wide column"></div>
+  <div class="ten wide column">
+        <table class="ui celled table">
+          <thead>
+            <tr><th>ID</th>
+            <th>人物名</th>
+            <th>画像</th>
+            <th>出来事</th>
+            <th>説明</th>
+            <th>ページ数</th>
+            <th>ステージ</th>
+            <th>結果</th>
+            <th>状態</th>
+            <th>管理</th>
+          </tr></thead>
+          <tbody>
+            <% @histories.each do |history| %>
+            <tr>
+             <td><%= history.id %></td>
+             <td><%= link_to"#{history.name}", history, { :target => "_blank"}  %></td>
+             <td><%= image_tag(history.url, :size => '50x50') %></td>
+             <td><%= history.event %></td>
+             <td><%= history.description.truncate(20) %></td>
+             <td><%= history.page %></td>
+             <td><%= history.stage %></td>
+             <td><%= history.result %></td>
+             <td><%= history.status %></td>
+             <td>
+              <%= link_to "編集", edit_history_path(history.id), { :class => "ui olive button" } %>
+              <%= link_to "削除", history, { :class => "ui red button", method: :delete, data: { confirm: "本当に削除してもいいですか？" }} %>
+             </td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+  </div>
+  <div class="six wide column">
+      <%= render 'histories/new' %>
+  </div>
+</div>
